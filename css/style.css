@@ -1,0 +1,42 @@
+*{
+box-sizing: border-box;
+}
+
+main{
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+  height: 950px;
+  display: block;
+  background: black;
+}
+
+.card{
+  border: 1px solid black;
+  width: 29%;
+  height: 200px;
+  float: left;
+  margin: 2%;
+  background: white;
+}
+
+
+.blue.selected, .blue.matched{
+  background: blue;
+}
+
+.red.selected, .red.matched{
+  background: red;
+}
+
+.green.selected, .green.matched{
+  background: green;
+}
+
+.purple.selected, .purple.matched{
+  background: purple;
+}
+
+.orange.selected, .orange.matched{
+  background: orange;
+}
