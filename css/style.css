@@ -1,42 +1,84 @@
-*{
-box-sizing: border-box;
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
 }
 
-main{
-  border: 1px solid black;
-  width: 50%;
-  margin: auto;
-  height: 950px;
+/* Clear fix hack */ /*make sure to actually use the class though- this is to make sure the section/element doesn't collapse*/
+.clearfix:after {
+  content: ".";
   display: block;
-  background: black;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clear {
+	clear: both;
+}
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0;
 }
 
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #81B3D0;
+}
+.container{
+  width: 90%;
+  margin: auto;
+}
+.gameBorder{
+  text-align: center;
+}
 .card{
-  border: 1px solid black;
-  width: 29%;
-  height: 200px;
+  height: 100px;
+  color: white;
+  width: 15%;
+  font-size: 1.8rem;
+  border: 2px solid  RGBa(255,0,0,.2);
+  margin: 1% 8%;
   float: left;
-  margin: 2%;
-  background: white;
+  background-color: #DA005B;
 }
-
-
-.blue.selected, .blue.matched{
-  background: blue;
+.card:hover {
+  border: 3px dotted green;
+  background-color: #E5A445;
 }
-
-.red.selected, .red.matched{
-  background: red;
+.selected{
+  border: 3px dotted green;
+  background-color: #E00F71;
 }
-
-.green.selected, .green.matched{
-  background: green;
-}
-
-.purple.selected, .purple.matched{
-  background: purple;
-}
-
-.orange.selected, .orange.matched{
-  background: orange;
+@media only screen and (max-width:768px){
+  body {
+    font-size: .8em;
+  }
+  section{
+    font-size: .9em;
+  }
+  h1{
+    font-size: 1.5em;
+  }
+  .card{
+    width: 32%;
+    font-size: 1.5rem;
+    color: white;
+  }
 }
